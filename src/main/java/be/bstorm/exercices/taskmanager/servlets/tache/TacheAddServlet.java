@@ -21,7 +21,7 @@ public class TacheAddServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/tache/add-form.jsp").forward(req, resp);
+        req.getRequestDispatcher("../tache/add-form.jsp").forward(req, resp);
     }
 
     @Override
@@ -47,7 +47,7 @@ public class TacheAddServlet extends HttpServlet {
             TacheForm form = new TacheForm(nom, deadline, priorite, description, dureeEstimee);
             service.add( form );
 
-            resp.sendRedirect("/tache");
+            resp.sendRedirect("../tache");
         }
         catch (Exception ex){ // gestion des erreurs simplifiée
             resp.sendError(400, ex.getMessage());
