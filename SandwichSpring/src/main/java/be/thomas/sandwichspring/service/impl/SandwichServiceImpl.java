@@ -1,5 +1,6 @@
 package be.thomas.sandwichspring.service.impl;
 
+import be.thomas.sandwichspring.entity.Sandwich;
 import be.thomas.sandwichspring.models.SandwichDTO;
 import be.thomas.sandwichspring.repository.SandwichRepository;
 import be.thomas.sandwichspring.service.SandwichService;
@@ -17,9 +18,18 @@ public class SandwichServiceImpl implements SandwichService {
         this.sandwichRepository = sandwichRepository;
     }
 
-    @Override
     public List<SandwichDTO> getAll() {
-        return null;
+        List<Sandwich> sandwiches = sandwichRepository.findAll();
+        return sandwiches.stream()
+                .map(
+                        entity -> SandwichDTO.builder()
+                                .id(entity.getId())
+                                .name(entity.getName())
+                                .desc(entity.getDesc())
+                                .price(entity.getPrice())
+                                .build()
+                )
+                .toList();
     }
 
 }

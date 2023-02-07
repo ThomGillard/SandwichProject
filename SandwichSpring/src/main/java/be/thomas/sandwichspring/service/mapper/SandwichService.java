@@ -1,7 +1,7 @@
-package be.thomas.sandwichspring.service;
+package be.thomas.sandwichspring.service.mapper;
 
-import java.util.List;
 import be.thomas.sandwichspring.models.SandwichDTO;
+import java.util.List;
 
 public interface SandwichService {
 
