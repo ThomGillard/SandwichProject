@@ -12,11 +12,10 @@ public class Sandwich {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "sandwich_id", nullable = false)
     private Long id;
-
     @Column(nullable = false)
     private String name;
     @Column(nullable = false)
-    private String desc;
+    private String description;
     @Column(nullable = false)
     private double price;
 
