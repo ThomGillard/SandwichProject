@@ -4,5 +4,6 @@ package be.thomas.sandwichspring.repository;
     import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface SandwichRepository extends JpaRepository<Sandwich,Long> {
-} {
 }
+
+
