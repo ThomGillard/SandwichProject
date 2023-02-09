@@ -1,4 +1,4 @@
-package be.thomas.sandwichspring.models;
+package be.thomas.sandwichspring.models.dto;
 
 import lombok.Builder;
 import lombok.Data;

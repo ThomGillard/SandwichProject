@@ -1,7 +1,8 @@
 package be.thomas.sandwichspring.service.mapper;
 
-import be.thomas.sandwichspring.entity.Sandwich;
-import be.thomas.sandwichspring.models.SandwichDTO;
+import be.thomas.sandwichspring.models.entity.Sandwich;
+import be.thomas.sandwichspring.models.dto.SandwichDTO;
+import be.thomas.sandwichspring.models.form.SandwichInsertForm;
 import org.springframework.stereotype.Service;
 
 
@@ -19,5 +20,9 @@ public class SandwichMapper {
                 .price(entity.getPrice())
                 .build();
 
+    }
+
+    public Sandwich toEntity(SandwichInsertForm form) {
+        return null;
     }
 }
